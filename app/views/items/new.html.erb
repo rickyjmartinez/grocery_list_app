@@ -1,0 +1,23 @@
+<h1>New item request</h1>
+<form method="post" action="/items">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Item name </label>
+    <input type="text" name="item[item_name]">
+  </div>
+  <div>
+    <label>Quantity </label>
+    <input type="text" name="item[quantity]">
+  </div>
+  <div>
+    <label>User ID </label>
+    <input type="text" name="item[user_id]">
+  </div>
+  <div>
+    <label>household_id </label>
+    <input type="text" name="item[household_id]">
+  </div>
+  <div>
+    <input type="submit" value="Create request">
+  </div>
+</form>

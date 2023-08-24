@@ -1,7 +1,7 @@
 <h1>What's needed?</h1>
 <% @items.each do |item| %>
   <h2><%= item.item_name %></h2>
-  <p>How many? <%= item.quantity %></p>
   <p>Requested by: <%= item.user.name %></p>
+  <p>How many? <%= item.quantity %></p>
   <p>Status: <%= item.status%></p>
 <% end %>
