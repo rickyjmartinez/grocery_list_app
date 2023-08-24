@@ -10,8 +10,8 @@ class UsersController < ApplicationController
       email: params[:user][:email],
       password: params[:user][:password],
       password_confirmation: params[:user][:password_confirmation],
-      phone: params[:phone],
-      household_id: [:household_id],
+      phone: params[:user][:phone],
+      household_id: params[:user][:household_id],
     )
     if @user.save
       session[:user_id] = @user.id
