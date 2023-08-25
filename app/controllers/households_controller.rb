@@ -35,4 +35,10 @@ class HouseholdsController < ApplicationController
     )
     redirect_to "/households"
   end
+
+  def destroy
+    @household = Household.find_by(id: params[:id])
+    @household.destroy
+    redirect_to "/households", status: :see_other
+  end
 end
