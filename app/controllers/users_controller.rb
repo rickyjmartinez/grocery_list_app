@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     )
     if @user.save
       session[:user_id] = @user.id
-      redirect_to "/" #add a homepage here
+      redirect_to "/households" #add a homepage here
     else
       render :new, status: :unprocessable_entity
     end
