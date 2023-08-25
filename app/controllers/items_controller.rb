@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
     #item.where some logic to find the items?
+    # @items = Item.find_by(id: current_user.household_id)
     render :index
   end
 

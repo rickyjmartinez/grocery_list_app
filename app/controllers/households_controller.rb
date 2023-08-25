@@ -1,7 +1,6 @@
 class HouseholdsController < ApplicationController
   def index
-    @household = Household.find_by(id: current_user.household_id)
-    # @households = Household.all
+    @households = Household.all
     render :index
   end
 
