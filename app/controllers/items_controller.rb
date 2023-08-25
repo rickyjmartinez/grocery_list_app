@@ -36,7 +36,14 @@ class ItemsController < ApplicationController
       quantity: params[:item][:quantity],
       user_id: params[:item][:user_id],
       household_id: params[:item][:household_id],
+      status: params[:item][:status],
     )
     redirect_to "/households"
+  end
+
+  def destroy
+    @item = Item.find_by(id: params[:id])
+    @item.destroy
+    redirect_to "/households", status: :see_other
   end
 end

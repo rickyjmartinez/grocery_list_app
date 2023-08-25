@@ -4,3 +4,5 @@
   <p>How many? <%= @item.quantity %></p>
   <p>Status: <%= @item.status%></p>
   <a href="/items/<%= @item.id %>/edit">Edit item</a>
+  <a href="/items/<%= @item.id %>" data-turbo-method="delete">Remove item</a>
+
