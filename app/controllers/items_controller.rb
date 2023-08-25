@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
       user_id: params[:item][:user_id],
       household_id: params[:item][:household_id],
     )
-    redirect_to "/households"
+    redirect_to "/items/new"
   end
 
   def edit
