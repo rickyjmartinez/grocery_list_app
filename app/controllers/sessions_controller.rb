@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to "/households" #redirect somewhere/homepage?
+      redirect_to "/households"
     else
       redirect_to "/login"
     end
