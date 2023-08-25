@@ -1,8 +1,9 @@
-<h1>Households</h1>
-<% @households.each do |household| %>
-  <h2><%= household.name %></a></h2>
-  <a href="/households/<%= household.id %>">More info</a>
-<% end %>
+<h1>Your household</h1>
+
+<% @household.users.each do |user| %>
+    <div><%=user.name %></div>
+  <%end%>
+
 <br>
 <br>
 <a href="/households/new">New household</a>

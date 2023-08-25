@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    #item.where some logic to find the items?
     render :index
   end
 

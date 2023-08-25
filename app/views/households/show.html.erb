@@ -3,7 +3,6 @@
 <% @household.users.each do |user| %>
     <div><%=user.name %></div>
   <%end%>
-<a href="/households">Back to all households</a>
 <br>
 <a href="/households/<%= @household.id %>/edit">Edit household</a>
 <br>
