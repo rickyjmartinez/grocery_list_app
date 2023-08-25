@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :households
 
   #users
+  get "/users" => "users#index"
+  get "/users/:id" => "users#show"
   get "/signup" => "users#new"
   post "/users" => "users#create"
 

@@ -1,0 +1,6 @@
+<h1>Item info</h1>
+<h2><%= @item.item_name %></h2>
+ <p>Requested by: <%= @item.user.name %></p>
+  <p>How many? <%= @item.quantity %></p>
+  <p>Status: <%= @item.status%></p>
+  <a href="/items/<%= @item.id %>/edit">Edit item</a>

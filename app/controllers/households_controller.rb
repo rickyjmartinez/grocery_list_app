@@ -5,7 +5,7 @@ class HouseholdsController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @household = Household.find_by(id: params[:id])
     render :show
   end
 end

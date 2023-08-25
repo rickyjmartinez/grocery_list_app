@@ -1,0 +1,24 @@
+<h1>Edit request</h1>
+<form method="post" action="/items/<%= @item.id %>">
+  <input type="hidden" name="_method" value="patch" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Name </label>
+    <input type="text" name="item[item_name]" value="<%= @item.item_name %>">
+  </div>
+  <div>
+    <label>Quantity </label>
+    <input type="text" name="item[quantity]" value="<%= @item.quantity %>">
+  </div>
+  <div>
+    <label>Requested by </label>
+    <input type="text" name="item[user_id]" value="<%= @item.user_id %>">
+  </div>
+    <div>
+    <label>Household </label>
+    <input type="text" name="item[household_id]" value="<%= @item.household_id %>">
+  </div>
+  <div>
+    <input type="submit" value="Update item">
+  </div>
+</form>
