@@ -21,4 +21,18 @@ class HouseholdsController < ApplicationController
     )
     redirect_to "/households"
   end
+
+  def edit
+    @household = Household.find_by(id: params[:id])
+    render :edit
+  end
+
+  def update
+    @household = Household.find_by(id: params[:id])
+    @household.update(
+      name: params[:household][:name],
+      location: params[:household][:location],
+    )
+    redirect_to "/households"
+  end
 end

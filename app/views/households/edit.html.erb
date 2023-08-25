@@ -1,0 +1,16 @@
+<h1>Edit household</h1>
+<form method="post" action="/households/<%= @household.id %>">
+  <input type="hidden" name="_method" value="patch" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Name </label>
+    <input type="text" name="household[name]" value="<%= @household.name %>">
+  </div>
+  <div>
+    <label>Location </label>
+    <input type="text" name="household[location]" value="<%= @household.location %>">
+  </div>
+  <div>
+    <input type="submit" value="Update household">
+  </div>
+</form>
